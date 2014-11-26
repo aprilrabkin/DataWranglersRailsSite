@@ -6,11 +6,8 @@
 	<meta name="description" content="New York City Data Wranglers">
 	<meta name="webmaster" content="April Rabkin">
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Merriweather:400,400italic,700italic" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/icons.css">
-	<link rel="stylesheet" href="css/animate.min.css">
+	<%= stylesheet_link_tag('http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Merriweather:400,400italic,700italic', "bootstrap.min.css", "style.css", "icons.css", "animate.min.css")%>
+
 	<link rel="shortcut icon" href="img/ico/32.png" sizes="32x32" type="image/png"/>
 	<link rel="apple-touch-icon-precomposed" href="img/ico/60.png" type="image/png"/>
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/ico/72.png" type="image/png"/>
@@ -23,7 +20,7 @@
 		</head>
 
 		<body id="home">
-			<div id="menu" class="menu-right">
+			<!-- <div id="menu" class="menu-right">
 				<ul>
 					<form class="menu-search" >
 						<div class="form-group header">
@@ -40,7 +37,7 @@
 							</ul>		
 						</li>
 					</ul>
-				</div>
+				</div> -->
 				<div id="wrap">
 <!-- 			<div id="main-nav" class="">
 				<div class="container">
@@ -74,23 +71,29 @@
 
 						<div >
 							<div class="row hidden-xs">
-								<div class="col-sm-4 col-md-4">	
-									<a href="https://www.dropbox.com/sh/iqulv6lb8pxzyzn/AAABVChc2xkEws0rLn4Mmsrra/nycDataWranglers?dl=0"><img src="img/img_books2.jpg" class="img-responsive" alt="img_books2"></a>
+								<div class="col-sm-4 col-md-4">
+									<%= link_to 'https://www.dropbox.com/sh/iqulv6lb8pxzyzn/AAABVChc2xkEws0rLn4Mmsrra/nycDataWranglers?dl=0' do %>
+									<%= image_tag("img_books2.jpg", class: 'img-responsive', alt: "img_books2") %>
 									<h4 class="text-center"><a href="https://www.dropbox.com/sh/iqulv6lb8pxzyzn/AAABVChc2xkEws0rLn4Mmsrra/nycDataWranglers?dl=0">Textbooks & Resources</a></h4>
+									<% end %>
 									<p class="post-date text-center"></p>
 								</div>
 
 
 								<div class="col-sm-4 col-md-4">	
-									<a href="https://www.kaggle.com/competitions"><img src="img/img_bird_flock3.jpg" class="img-responsive" alt="img_bird_flock3"></a>
-									<h4 class="text-center"><a href="https://www.kaggle.com/competitions">Kaggle Team</a></h4>
+									<%= link_to("https://www.kaggle.com/competitions") do %>
+									<%= image_tag("img_bird_flock3.jpg", class: "img-responsive", alt: "img_bird_flock3") %>
+									<h4 class="text-center">Kaggle Team</h4>
+									<%end%>
 									<p class="post-date text-center"></p>
 								</div>
 
 
 								<div class="col-sm-4 col-md-4">	
-									<a href="mailto:nycdatawranglers@gmail.com"><img  src="img/img2.jpg" class="img-responsive" alt="img2"></a>
-									<h4 class="text-center"><a href="mailto:nycdatawranglers@gmail.com">Corporate Queries</a></h4>
+									<%= link_to "mailto:nycdatawranglers@gmail.com" do %>
+									<%= image_tag("img2.jpg", class: "img-responsive", alt: "img2")%>
+									<h4 class="text-center">Corporate Queries</h4>
+									<% end %>
 									<p class="post-date text-center"></p>	
 								</div>
 							</div>
@@ -99,24 +102,30 @@
 
 							<div class="row visible-xs">
 								<div class="col-sm-12">
-									<div class="media">
-										<a class="pull-left" href="https://www.dropbox.com/sh/iqulv6lb8pxzyzn/AAABVChc2xkEws0rLn4Mmsrra/nycDataWranglers?dl=0"><img class="media-object" src="img/img_books2.jpg" width="100" alt=""></a>
+									<div class="media pull-left">
+										<%= link_to "https://www.dropbox.com/sh/iqulv6lb8pxzyzn/AAABVChc2xkEws0rLn4Mmsrra/nycDataWranglers?dl=0" do %>
+										<%= image_tag("img_books2.jpg", class: "media-object", width: "100", alt: "") %>
 										<div class="media-body">
-											<h4 class="media-heading"><a href="https://www.dropbox.com/sh/iqulv6lb8pxzyzn/AAABVChc2xkEws0rLn4Mmsrra/nycDataWranglers?dl=0">Textbooks & Resources</a></h4>
+											<h4 class="media-heading">Textbooks & Resources</h4>
+											<% end %>
 											<p class="post-date"></p>
 										</div>
 									</div>
-									<div class="media">
-										<a class="pull-left" href="https://www.kaggle.com/competitions"><img class="media-object" src="img/img_bird_flock3.jpg" width="100" alt="img_bird_flock3.jpg"></a>
+									<div class="media pull-left">
+										<%= link_to "https://www.kaggle.com/competitions" do %>
+										<%= image_tag("img_bird_flock3.jpg", class: "media-object", width: "100") %>
 										<div class="media-body">
-											<h4 class="media-heading"><a href="https://www.kaggle.com/competitions"> Kaggle Team </a></h4>
+											<h4 class="media-heading">Kaggle Team</h4>
+											<% end %>
 											<p class="post-date"></p>
 										</div>
 									</div>
-									<div class="media">
-										<a class="pull-left" href="mailto:nycdatawranglers@gmail.com"><img class="media-object" src="img/img2.jpg" width="100" alt=""></a>
+									<div class="media pull-left">
+										<% link_to("mailto:nycdatawranglers@gmail.com") do %>
+										<% image_tag("img2.jpg", class: "media-object", width: "100")%>
 										<div class="media-body">
-											<h4 class="media-heading"><a href="mailto:nycdatawranglers@gmail.com">Corporate Queries</a></h4>
+											<h4 class="media-heading">Corporate Queries</h4>
+											<% end %>
 											<p class="post-date"></p>
 										</div>
 									</div>
@@ -160,7 +169,6 @@
 									<div class="row">
 										<div class="col-sm-12">
 											<div class="media">
-												<!-- <a class="pull-left" href="http://flatironschool.com/"><img class="media-object" width="120" alt=""></a> -->
 												<%= link_to 'http://flatironschool.com/' do %>
 												<%=image_tag('flatiron_logo.jpg', width: '120', class: 'pull-left', class: 'media-object') %>
 												<% end %>
@@ -192,7 +200,10 @@
 					<div class="container">
 						<p class="pull-left"><a>Data Wranglers NYC</a></p>
 						<ul class="social-links pull-right">
-							<li><a href="http://www.meetup.com/NYC-Data-Wranglers/"><img class="media-object" src="img/ico/meetupicon.png" width="50" alt=""></i></a></li>
+							<li><%= link_to ("http://www.meetup.com/NYC-Data-Wranglers/") do %>
+								<% image_tag("ico/meetupicon.png", class: "media-object", width: "50") %>
+								<%end%>
+								</li>
 <!-- 								<li><a href="#link"><i class="icon-facebook"></i></a></li>
 	<li><a href="#link"><i class="icon-googleplus"></i></a></li> -->
 </ul>
@@ -235,11 +246,7 @@
 		</div>
 	</div>
 </div>
-<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/placeholders.min.js"></script>
-<script type="text/javascript" src="js/wow.min.js"></script>
-<script type="text/javascript" src="js/custom.js"></script>
+<%=javascript_include_tag("jquery-1.9.1.min.js", "bootstrap.min.js", "wow.min.js", "custom.js" )%>
 
 </body>
 </html>
