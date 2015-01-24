@@ -8,6 +8,80 @@
 </head>
 <body>
 <%= yield %>
+<footer>
+				<div class="footer">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-4 col-md-4 footer-widget">
+								<h3>Statistics</h3>
 
+								<span></span>
+
+								<div class="stats">
+									<div class="line">
+										<span class="counter">800+</span>
+										<span class="caption">Members on Meetup.com</span>
+									</div>
+									<div class="line">
+										<span class="counter">1</span>
+										<span class="caption">Workshop per month</span>
+									</div>
+									<div class="line">
+										<span class="counter">1</span>
+										<span class="caption">Kaggle Team</span>
+									</div>                    
+								</div>
+							</div>
+
+							<div class="col-sm-4 col-md-4 footer-widget">
+								<h3>Our Sponsor</h3>
+								<div class="post-recent-widget">
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="media">
+												<%= link_to 'http://flatironschool.com/' do %>
+												<%=image_tag('flatiron_logo.jpg', width: '120', class: 'pull-left', class: 'media-object') %>
+												<% end %>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-sm-4 col-md-4 footer-widget clearfix">
+								<h3>Tags</h3>
+								<ul class="tags">
+									<li><a>Kaggle</a></li>
+									<li><a>Python</a></li>
+									<li><a>R</a></li>
+									<li><a>Excel</a></li>
+									<li><a>Ruby</a></li>
+									<li><a>Matlab</a></li>
+									<li><a>SAS</a></li>
+									<li><a>Data</a></li>
+									<li><a>Pizza</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="copyright">
+					<div class="container">
+						<p class="pull-left">
+						<a href="http://www.nycdatawranglers.com">Data Wranglers NYC</a>
+					
+
+		</p>
+						<ul class="social-links pull-right">
+							<li><%= link_to ("http://www.meetup.com/NYC-Data-Wranglers/") do %>
+								<% image_tag("ico/meetupicon.png", class: "media-object", width: "50") %>
+								<%end%>
+								</li>
+
+</ul>
+</div>
+</div>
+</footer>
 </body>
 </html>
