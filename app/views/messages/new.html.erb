@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+  <title>Our Team</title> 
+  <%= stylesheet_link_tag('http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Merriweather:400,400italic,700italic', "bootstrap.min.css", "style.css", "icons.css", "animate.min.css")%>
+
+  <link rel="shortcut icon" href="img/ico/32.png" sizes="32x32" type="image/png"/>
+  <link rel="apple-touch-icon-precomposed" href="img/ico/60.png" type="image/png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/ico/72.png" type="image/png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/ico/120.png" type="image/png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/ico/152.png" type="image/png"/>
+<!--    [if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif] -->
+    </head>
+
+      <body id="home">
+
+      <section id="hero" class="light-typo">
+        <div id="cover-image" class="image-bg animated fadeIn"></div>
+        <div class="container welcome-content">
+          <div class="middle-text">
+            <h1>Contact Us</h1><br><br>
+            <a class="btn smooth-scroll" href="http://www.meetup.com/NYC-Data-Wranglers/">Meetup</a>
+          </div>
+        </div>
+      </section>
+
+      <div id="start" class="container content">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            
+              <div class="post-date">
+              </div>    
+              
+<%= form_for @message, url: contact_path do |message_form| %>
+  <fieldset>
+    <div class="field">
+      <%= message_form.text_field :name, placeholder: "Your name" %>
+    </div>
+    <br>
+    
+    <div class="field">
+      <%= message_form.email_field :email, placeholder: "Your email address"%>
+    </div>
+    <br>
+    <div class="field">
+      <%= message_form.text_area :content, placeholder: "Your message"%>
+    </div>
+  </fieldset>
+  <br>
+  <fieldset>
+    <div class="field">
+      <%= message_form.submit "Send" %>
+    </div>
+  </fieldset>
+<% end %>
+          </div>
+        </div>
+      </div>
+            <footer>
+        <div class="footer">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-4 col-md-4 footer-widget">
+
+                <span></span>
+
+                <div class="stats">
+                  
+                </div>
+              </div>
+
+              <div class="col-sm-4 col-md-4 footer-widget">
+
+                <div class="post-recent-widget">
+                  <div class="row">
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-4 col-md-4 footer-widget clearfix">
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <div class="container">
+
+</div>
+</div>
+</footer>
+</div>  
+<%=javascript_include_tag("jquery-1.9.1.min.js", "bootstrap.min.js", "wow.min.js", "custom.js" )%>
+
+      </body>
+</html>

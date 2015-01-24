@@ -2,13 +2,8 @@ Rails.application.routes.draw do
 
   root :to => "home#index"
 
-  resources :home, only: [:index]
-
-  resources :team, only: [:index]
-
-  resources :contact, only: [:index]
-
-  
+  get 'contact', to: 'messages#new'#, as: 'contact'
+  post 'contact', to: 'messages#create'
 
 
 

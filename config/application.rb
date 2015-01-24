@@ -21,3 +21,20 @@ module DataWranglersRailsSite
     # config.i18n.default_locale = :de
   end
 end
+
+
+# config.action_mailer.smtp_settings = {
+ActionMailer::Base.smtp_settings = {
+  address: "smtp.gmail.com",
+  port: 587,
+  domain: "gmail.com",
+  user_name: "nycdatawranglers",
+  password: "pizzakaggle",
+  authentication: :plain,
+  enable_starttls_auto: true
+}
+
+# config.action_mailer.default_url_options = {
+# ActionMailer::Base.default_url_options = {
+#   host: "nycdatawranglers.com"
+# }
