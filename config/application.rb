@@ -19,22 +19,23 @@ module DataWranglersRailsSite
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+
+    config.action_mailer.smtp_settings = {
+      address: "smtp.gmail.com",
+      port: 587,
+      domain: "gmail.com",
+      user_name: "nycdatawranglers",
+      password: "pizzakaggle",
+      authentication: :plain,
+      enable_starttls_auto: true
+    }
+    config.action_mailer.default_url_options = {
+      host: "nycdatawranglers.com"
+    }
+
   end
 end
 
 
-# config.action_mailer.smtp_settings = {
-ActionMailer::Base.smtp_settings = {
-  address: "smtp.gmail.com",
-  port: 587,
-  domain: "gmail.com",
-  user_name: "nycdatawranglers",
-  password: "pizzakaggle",
-  authentication: :plain,
-  enable_starttls_auto: true
-}
 
-# config.action_mailer.default_url_options = {
-# ActionMailer::Base.default_url_options = {
-#   host: "nycdatawranglers.com"
-# }
+
